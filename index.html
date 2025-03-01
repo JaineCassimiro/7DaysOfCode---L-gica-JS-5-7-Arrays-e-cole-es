@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente de Compras Inteligente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 🔥 Escolha de Modelo -->
+        <h2>👨‍👩‍👧‍👦 Escolha o Modelo</h2>
+        <select id="modo">
+            <option value="individual">👤 Individual</option>
+            <option value="familia">👨‍👩‍👧‍👦 Família</option>
+        </select>
+        <button onclick="definirModo()">✅ Confirmar</button>
+
+        <!-- 👤 PERFIL INDIVIDUAL -->
+        <div id="perfilIndividual">
+            <h2>👤 Seu Perfil</h2>
+            <input type="text" id="nome" placeholder="Seu nome">
+            <input type="number" id="altura" placeholder="Altura (cm)">
+            <input type="number" id="peso" placeholder="Peso (kg)">
+            <label>Tem Diabetes?</label>
+            <select id="diabetes">
+                <option value="nao">Não</option>
+                <option value="sim">Sim</option>
+            </select>
+            <button onclick="salvarUsuario()">💾 Salvar Perfil</button>
+        </div>
+
+        <!-- 👨‍👩‍👧‍👦 PERFIL FAMILIAR -->
+        <div id="perfilFamilia" style="display: none;">
+            <h2>👨‍👩‍👧‍👦 Adicionar Membros da Família</h2>
+            <input type="text" id="nomeMembro" placeholder="Nome do membro">
+            <input type="number" id="alturaMembro" placeholder="Altura (cm)">
+            <input type="number" id="pesoMembro" placeholder="Peso (kg)">
+            <select id="diabetesMembro">
+                <option value="nao">Não</option>
+                <option value="sim">Sim</option>
+            </select>
+            <button onclick="adicionarMembro()">➕ Adicionar Membro</button>
+
+            <h3>👨‍👩‍👧‍👦 Membros cadastrados:</h3>
+            <ul id="listaMembros"></ul>
+        </div>
+
+        <!-- 💰 ORÇAMENTO E CALCULADORA -->
+        <div id="orcamento">
+            <h2>💰 Controle de Gastos</h2>
+            <input type="number" id="orcamentoInput" placeholder="Defina seu orçamento mensal">
+            <button onclick="definirOrcamento()">💵 Definir Orçamento</button>
+        </div>
+
+        <h3>🧮 Total Gasto: R$ <span id="total">0.00</span></h3>
+
+        <!-- 🛒 FORMULÁRIO PARA ADICIONAR ITENS NA LISTA -->
+        <div id="formulario">
+            <h2>🛒 Adicionar Itens</h2>
+            <input type="text" id="item" placeholder="Nome do Item">
+            <input type="number" id="quantidade" placeholder="Quantidade">
+            <input type="number" id="preco" placeholder="Preço unitário">
+            <input type="date" id="validade">
+            <select id="categoria">
+                <option value="Frutas">Frutas</option>
+                <option value="Laticínios">Laticínios</option>
+                <option value="Carnes">Carnes</option>
+                <option value="Padaria">Padaria</option>
+                <option value="Congelados">Congelados</option>
+                <option value="Doces">Doces</option>
+                <option value="Verduras">Verduras</option>
+                <option value="Outros">Outros</option>
+            </select>
+            <button onclick="adicionarItem()">➕ Adicionar</button>
+        </div>
+
+        <!-- 📜 LISTA DE COMPRAS -->
+        <div id="listaDeCompras"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

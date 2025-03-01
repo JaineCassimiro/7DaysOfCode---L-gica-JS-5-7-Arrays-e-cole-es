@@ -1,0 +1,148 @@
+/* Paleta de cores */
+:root {
+    --rosa: #ff69b4;
+    --azul-claro: #cbe7ff;
+    --cinza-claro: #f8f8f8;
+    --texto: #333;
+}
+
+/* Estilo geral */
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(120deg, var(--rosa), var(--azul-claro));
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Container central */
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.container:hover {
+    box-shadow: 0px 5px 25px rgba(0,0,0,0.2);
+}
+
+/* Títulos */
+h1, h2 {
+    color: var(--texto);
+    margin-bottom: 10px;
+}
+
+/* Formulários */
+#cadastro, #formulario, #orcamento {
+    background: var(--cinza-claro);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+/* Animação ao focar */
+input:focus, select:focus {
+    border-color: var(--rosa);
+    box-shadow: 0px 0px 8px var(--rosa);
+}
+
+/* Botões */
+button {
+    background: var(--rosa);
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+}
+
+button:hover {
+    background: #d14789;
+    transform: scale(1.05);
+}
+
+/* Lista de compras */
+#listaDeCompras {
+    text-align: left;
+    margin-top: 15px;
+}
+
+/* Itens */
+.item {
+    background: var(--cinza-claro);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Botão de remover */
+button.remover {
+    background: #ff4d4d;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    transition: 0.3s;
+}
+
+button.remover:hover {
+    background: #cc0000;
+}
+
+/* IMC e Dieta */
+#imc, #dieta {
+    font-weight: bold;
+    color: var(--rosa);
+}
+
+/* Promoções */
+#promocoes {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+#promocoes li {
+    padding: 5px;
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+}
